@@ -32,15 +32,15 @@ You can specify both a relative or absolute path, for relative remember to add t
 
 ### Steps
 
-	1. The scripts starts accessing each relevant file on the dataset according to the original structure and saves every set into a table.
-	2. The features extracted are used to rename the columns on the measurements set (both the training and testing ones).
-	3. Once the columns are named we replicate the table into a new one only including those columns that have mean and standard deviations values.
-	4. The selection is done using the function grepl which looks for either mean or std in the column names.
-	5. After this a new table is created merging the subject and activity information for both train and test to finally row bind them together, after having deleted the useless activity ids and renamed the columns.
-	6. The same binding is done with the measurements train and test table.
-	7. Finally both tables are column bind to generate the final "data" table.
-	8. The second part of the assignment is completed using a single command: "aggregate". We create a new table ("tidyData") including the mean measurement of every column of the data table (excluding the first two columns, Activity and SubectId which are only for sorting purposes), according to the categories of Activity and Subject the values belong to.
-	9. The contents of tidy are written into the "tidy.txt" file in the working directory.
+1. The scripts starts accessing each relevant file on the dataset according to the original structure and saves every set into a table.
+2. The features extracted are used to rename the columns on the measurements set (both the training and testing ones).
+3. Once the columns are named we replicate the table into a new one only including those columns that have mean and standard deviations values.
+4. The selection is done using the function grepl which looks for either mean or std in the column names.
+5. After this a new table is created merging the subject and activity information for both train and test to finally row bind them together, after having deleted the useless activity ids and renamed the columns.
+6. The same binding is done with the measurements train and test table.
+7. Finally both tables are column bind to generate the final "data" table.
+8. The second part of the assignment is completed using a single command: "aggregate". We create a new table ("tidyData") including the mean measurement of every column of the data table (excluding the first two columns, Activity and SubectId which are only for sorting purposes), according to the categories of Activity and Subject the values belong to.
+9. The contents of tidy are written into the "tidy.txt" file in the working directory.
 
 
 
